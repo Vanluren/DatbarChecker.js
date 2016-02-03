@@ -25,25 +25,20 @@
         weekday[6] = "Lørdag";
 
     var answer = document.getElementById("answer")
-
       if (n == 5)
         {
           answer.innerHTML = "Baren skulle være åben fra klokken 15:00!";
         }
-
       else
       {
         answer.innerHTML = "Baren er desværre ikke åben, da det er " + weekday[n] + " og klokken er " + hours + ":" + minutes;
       }
   }
-</script>
+ </script>
 </head>
 <body onload="datbarCheck();">
-
   <div id="print"></div>
   <div id="answer"></div>
-
-
 </body>
 
 </html>

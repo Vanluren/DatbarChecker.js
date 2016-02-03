@@ -1,0 +1,12 @@
+body{
+  width: 100%;
+  background-color: #2E4172;
+  color: #B4C0DE;
+  font-style: normal;
+  font-family: sans-serif;
+  font-size: 50px;
+}
+#answer{
+     width: 1087px;
+     margin: 350px auto 0 auto;
+}
