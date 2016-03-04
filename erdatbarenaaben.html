@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
 <script>
 
-  function datbarCheck()
+  var datbarCheck = function()
   {
 
     var d = new Date();
@@ -15,23 +15,32 @@
     var hours = d.getHours();
     var minutes = d.getMinutes();
 
-    var weekday = new Array(7);
-        weekday[0]=  "Søndag";
-        weekday[1] = "Mandag";
-        weekday[2] = "Tirsdag";
-        weekday[3] = "Onsdag"
-        weekday[4] = "Torsdag";
-        weekday[5] = "Fredag";
-        weekday[6] = "Lørdag";
+    var weekday = ["Søndag", "Mandag" , "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag", ];
 
     var answer = document.getElementById("answer")
-      if (n == 5)
+
+      if (n == 4)
         {
-          answer.innerHTML = "Baren skulle være åben fra klokken 15:00!";
+            if(hours == 02){
+                answer.innerHTML = "Baren er desværre lukket nu!</br> <h3>(Så gå dog i seng.)</h3>"
+            }
+            else if(hours > 15 ){
+                answer.innerHTML = "Baren har været åben i " + ((15 - hours) * -1) ;
+
+                    if((15-hours *-1) == 1){
+                        answer.innerHTML = "time og " + minutes + " minutter";
+                    }
+                    else {
+                        answer.innerHTML = "timer og " + minutes + " mintter";
+                    }
+
+            }
+                answer.innerHTML = "Baren åbner om " + ((hours - 15) * -1 ) + " timer</br> <h3> Vi glæder os alle</h3>";
         }
       else
       {
-        answer.innerHTML = "Baren er desværre ikke åben, da det er " + weekday[n] + " og klokken er " + hours + ":" + minutes;
+        answer.innerHTML = "Baren er desværre ikke åben, da det er " + weekday[n] + ". Burde du ikke læse?";
+
       }
   }
  </script>

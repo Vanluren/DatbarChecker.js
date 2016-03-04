@@ -3,10 +3,20 @@ body{
   background-color: #2E4172;
   color: #B4C0DE;
   font-style: normal;
-  font-family: sans-serif;
+  font-family:"Helvetica", "Arial", sans-serif;
   font-size: 50px;
+}
+h3{
+    margin: none;
+    padding: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
 }
 #answer{
      width: 1087px;
      margin: 350px auto 0 auto;
+}
+.titanic{
+    float: none;
 }
