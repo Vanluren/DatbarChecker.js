@@ -16,7 +16,7 @@
     var weekday = ["Søndag", "Mandag" , "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag", ];
     var answer = document.getElementById("answer");
 
-    if (n == 1)
+    if (n == 5)
         {
             if(hours == 02){
                 answer.innerHTML = "Baren er desværre lukket nu!</br> <h3>(Så gå dog i seng.)</h3>"
@@ -42,8 +42,7 @@
         }
       else
       {
-        answer.innerHTML = "Baren er desværre ikke åben, da det er " + weekday[n] + ". Burde du ikke læse?";
-
+        answer.innerHTML = "Baren er desværre ikke åben, da det er " + weekday[n] + ". <h3>Burde du ikke læse?</h3>";
       }
   }
  </script>
