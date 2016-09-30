@@ -11,7 +11,6 @@ var datbarCheck = function()
 
     }
     var sentences = JSON.parse(request.responseText)
-        console.log(sentences);
 //Genopfind tiden
     var todaysDate = new Date();
     var todaysWeekday = todaysDate.getDay();
@@ -26,7 +25,7 @@ var datbarCheck = function()
 //Lær den at finde rand tal
     var randomN = Math.round((Math.random()*10))
 
-    if (todaysWeekday == 3)
+    if (todaysWeekday == 5)
         {
             if(hour == 02){
                 answer.innerHTML = "Baren er desværre lukket nu!</br> <h3>(Så gå dog i seng.)</h3>"
