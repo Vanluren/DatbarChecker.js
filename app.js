@@ -9,11 +9,10 @@ var sentences;
     request.onreadystatechange = function() {
       if ( request.readyState === 4 && request.status === 200 ) {
         sentences = JSON.parse(request.responseText);
-        console.log(sentences);
-        console.log(sentences);
       }
   }
 
+  console.log(sentences);
 //Genopfind tiden
     var todaysDate = new Date();
     var todaysWeekday = todaysDate.getDay();
