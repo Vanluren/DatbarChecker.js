@@ -2,8 +2,8 @@ var datbarCheck = function()
   {
 
   var request = new XMLHttpRequest();
-        request.open("GET", "http://vanluren.github.io/DatbarChecker.js/sentences.json", false);
-        request.send(null);
+        request.open("GET", "http://vanluren.github.io/DatbarChecker.js/sentences.json", true);
+
     request.onreadystatechange = function() {
       if ( request.readyState === 4 && request.status === 200 ) {
         var sentences = JSON.parse(request.responseText);
