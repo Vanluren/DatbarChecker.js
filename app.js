@@ -1,23 +1,15 @@
-//15.00 = 900 minutter
-
-
-  var datbarCheck = function()
+var datbarCheck = function()
   {
-      var text = '{"sentences":[' +
- '{"sentence":"sidde der hjemme og prikke øjnene ud over noget DADs"},' +
- '{"sentence":"sidde der hjemme og ikke forstå hvad der er op og ned i CompArk"},' +
- '{"sentence":"sidde der hjemme og Hade IntDes?"},' +
- '{"sentence":"sidde der hjemme og regulere dine automater"},' +
- '{"sentence":"sidde der hjemme og bede til Bouvins ånd om at forstå x86_64"},' +
- '{"sentence":"sidde der hjemme og bede til Bouvins ånd om at forstå x86_64"},' +
- '{"sentence":"sidde der hjemme og bede til Bouvins ånd om at forstå x86_64"},' +
- '{"sentence":"sidde der hjemme og bede til Bouvins ånd om at forstå x86_64"},' +
- '{"sentence":"sidde der hjemme og bede til Bouvins ånd om at forstå x86_64"},' +
- '{"sentence":"sidde der hjemme og bede til Bouvins ånd om at forstå x86_64"},' +
- '{"sentence":"sidde der hjemme og bede til Bouvins ånd om at forstå x86_64"}]}';
 
-
-    var obj = JSON.parse(text);
+  var request = new XMLHttpRequest();
+        request.open("GET", "../sentences.json", false);
+        request.send(null);
+    request.onreadystatechange = function() {
+      if ( request.readyState === 4 && request.status === 200 ) {
+        var sentences = JSON.parse(request.responseText);
+        console.log(sentences);
+      }
+    }
 //Genopfind tiden
     var todaysDate = new Date();
     var todaysWeekday = todaysDate.getDay();
