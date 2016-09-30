@@ -29,17 +29,12 @@ var datbarCheck = function()
         {
             if(hour == 02){
                 answer.innerHTML = "Baren er desværre lukket nu!</br> <h3>(Så gå dog i seng.)</h3>"
-            }
-
-            else if(hour < 15){
-                if((hour - 1 ) <=1 ){
+            }else if((hour - 1 ) >=14){
                     answer.innerHTML="Baren åbner om " + ((hour - 14) * -1) + " Time og " + (60 - minut) + "minutter! <h3>Vi ses der nede.</h3>";
-                }
-                else {
-                    answer.innerHTML="Baren åbner om " + ((hour - 14) * -1) + " Timer og " + (60 - minut) + " minutter! <h3>Vi ses der nede.</h3>";
-                }
-            }
-            else{
+            }else if(hour == 14){
+
+                    answer.innerHTML="Baren åbner om " + (60 - minut) + " minutter! <h3>Vi ses der nede.</h3>";
+            }else{
                 if((hour - 15) === 0){
                             answer.innerHTML = "Baren har været åben i " + minut + " minutter. <h3>Så bare roligt, der er rigelig med tid før baren lukker.</h3>";
                         }
