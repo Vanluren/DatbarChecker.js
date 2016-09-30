@@ -1,15 +1,17 @@
 var datbarCheck = function()
   {
+      var sentences = "";
 
   var request = new XMLHttpRequest();
         request.open("GET", "http://vanluren.github.io/DatbarChecker.js/sentences.json", false);
         request.send(null);
     request.onreadystatechange = function() {
       if ( request.readyState === 4 && request.status === 200 ) {
-        var sentences = JSON.parse(request.responseText);
+          sentences = JSON.parse(request.responseText);
         console.log(sentences);
       }
-    }
+  }
+
 //Genopfind tiden
     var todaysDate = new Date();
     var todaysWeekday = todaysDate.getDay();
@@ -17,8 +19,10 @@ var datbarCheck = function()
     var hour = todaysDate.getHours();
     var minut = todaysDate.getMinutes();
     var weekdayArr = ["Søndag", "Mandag" , "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag"];
+
 //Lær den at snakke
     var answer = document.getElementById("answer");
+
 //Lær den at finde rand tal
     var randomN = Math.round((Math.random()*10))
 
@@ -48,6 +52,6 @@ var datbarCheck = function()
         }
       else
       {
-        answer.innerHTML = "Baren er desværre ikke åben, da det er " + weekdayArr[todaysWeekday] + ". <h3>Burde du ikke også"+ " " + obj.sentences[randomN].sentence + "?" + "</h3>";
+        answer.innerHTML = "Baren er desværre ikke åben, da det er " + weekdayArr[todaysWeekday] + ". <h3>Burde du ikke også"+ " " + sentences[randomN].sentence + "?" + "</h3>";
       }
   }
