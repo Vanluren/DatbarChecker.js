@@ -2,6 +2,7 @@ var datbarCheck = function()
   {
       var sentences = "";
 
+
   var request = new XMLHttpRequest();
         request.open("GET", "http://vanluren.github.io/DatbarChecker.js/sentences.json", false);
         request.send(null);
