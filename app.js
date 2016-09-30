@@ -2,7 +2,7 @@ var datbarCheck = function()
   {
 
  var request = new XMLHttpRequest();
-    request.open( "GET", "http://vanluren.github.io/DatbarChecker.js/sentences.json", false );
+    request.open( "GET", "//vanluren.github.io/DatbarChecker.js/sentences.json", false );
     request.send( null );
 
     request.onreadystatechange = function() {
@@ -40,7 +40,6 @@ var datbarCheck = function()
                         else {
                             answer.innerHTML = "Baren har været åben i " + ((15 - hour) * -1) + " timer og " + minut + " minutter";
                         }
-
                 }
         }
       else
