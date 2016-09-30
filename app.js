@@ -25,14 +25,13 @@ var datbarCheck = function()
 //Lær den at finde rand tal
     var randomN = Math.round((Math.random()*10))
 
-    if (todaysWeekday == 5)
+    if (todaysWeekday === 5)
         {
-            if(hour == 02){
+            if(hour === 02){
                 answer.innerHTML = "Baren er desværre lukket nu!</br> <h3>(Så gå dog i seng.)</h3>"
-            }else if((hour - 1 ) >=14){
-                    answer.innerHTML="Baren åbner om " + ((hour - 14) * -1) + " Time og " + (60 - minut) + "minutter! <h3>Vi ses der nede.</h3>";
-            }else if(hour == 14){
-
+            }else if((hour - 1) < 14){
+                    answer.innerHTML="Baren åbner om " + ((hour - 14) * -1) + " time og " + (60 - minut) + " minutter! <h3>Vi ses der nede.</h3>";
+            }else if(hour === 14){
                     answer.innerHTML="Baren åbner om " + (60 - minut) + " minutter! <h3>Vi ses der nede.</h3>";
             }else{
                 if((hour - 15) === 0){
