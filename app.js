@@ -9,12 +9,13 @@
  '{"sentence":"sidde der hjemme og Hade IntDes?"},' +
  '{"sentence":"sidde der hjemme og regulere dine automater"},' +
  '{"sentence":"sidde der hjemme og bede til Bouvins ånd om at forstå x86_64"},' +
- '{"sentence":""},' +
- '{"sentence":""},' +
- '{"sentence":""},' +
- '{"sentence":""},' +
- '{"sentence":""},' +
- '{"sentence":""}]}';
+ '{"sentence":"sidde der hjemme og bede til Bouvins ånd om at forstå x86_64"},' +
+ '{"sentence":"sidde der hjemme og bede til Bouvins ånd om at forstå x86_64"},' +
+ '{"sentence":"sidde der hjemme og bede til Bouvins ånd om at forstå x86_64"},' +
+ '{"sentence":"sidde der hjemme og bede til Bouvins ånd om at forstå x86_64"},' +
+ '{"sentence":"sidde der hjemme og bede til Bouvins ånd om at forstå x86_64"},' +
+ '{"sentence":"sidde der hjemme og bede til Bouvins ånd om at forstå x86_64"}]}';
+
 
     var obj = JSON.parse(text);
 //Genopfind tiden
@@ -28,9 +29,6 @@
     var answer = document.getElementById("answer");
 //Lær den at finde rand tal
     var randomN = Math.round((Math.random()*10))
-//Debuging **** HUSK AT SLETTE DET HER FØR DEPLOY****
-    console.log(randomN);
-    console.log(obj.sentences.length);
 
     if (todaysWeekday == 5)
         {
