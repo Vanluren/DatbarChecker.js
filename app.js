@@ -7,7 +7,7 @@ var datbarCheck = function()
     request.onreadystatechange = function() {
       if ( request.readyState === 4 && request.status === 200 ) {
         var sentences = JSON.parse(request.responseText);
-        console.log(sentences[0]);
+        console.log(sentences[2]);
         console.log(sentences);
       }
   }
