@@ -1,18 +1,17 @@
 var datbarCheck = function()
   {
 
-var sentences;
-  var request = new XMLHttpRequest();
-        request.open("GET", "http://vanluren.github.io/DatbarChecker.js/sentences.json", true
-    );
+ var request = new XMLHttpRequest();
+    request.open( "GET", "http://vanluren.github.io/DatbarChecker.js/sentences.json", false );
+    request.send( null );
 
     request.onreadystatechange = function() {
-      if ( request.readyState === 4 && request.status === 200 ) {
-        sentences = JSON.parse(request.responseText);
-      }
-  }
+            if (request.readyState == 4 && xmlHttp.status == 200)
+            callback(request.responseText);
 
-  console.log(sentences);
+    }
+    var sentences = JSON.parse(request.responseText)
+        console.log(sentences);
 //Genopfind tiden
     var todaysDate = new Date();
     var todaysWeekday = todaysDate.getDay();
