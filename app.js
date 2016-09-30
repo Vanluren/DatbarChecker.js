@@ -1,14 +1,13 @@
 var datbarCheck = function()
   {
-      var sentences = "";
-
 
   var request = new XMLHttpRequest();
         request.open("GET", "http://vanluren.github.io/DatbarChecker.js/sentences.json", false);
         request.send(null);
     request.onreadystatechange = function() {
       if ( request.readyState === 4 && request.status === 200 ) {
-          sentences = JSON.parse(request.responseText);
+        var sentences = JSON.parse(request.responseText);
+        console.log(sentences[0]);
         console.log(sentences);
       }
   }
