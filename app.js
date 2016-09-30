@@ -1,12 +1,13 @@
 var datbarCheck = function()
   {
-
+      var sentences;
   var request = new XMLHttpRequest();
-        request.open("GET", "http://vanluren.github.io/DatbarChecker.js/sentences.json", true);
+        request.open("GET", "http://vanluren.github.io/DatbarChecker.js/sentences.json", true
+    );
 
     request.onreadystatechange = function() {
       if ( request.readyState === 4 && request.status === 200 ) {
-        var sentences = JSON.parse(request.responseText);
+        sentences = JSON.parse(request.responseText);
         console.log(sentences[2]);
         console.log(sentences);
       }
